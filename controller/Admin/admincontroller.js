@@ -5,7 +5,7 @@ const jwtdata = require("jsonwebtoken")
 //To register Admin
 module.exports.registration = async (req, res) => {
     try {
-        console.log(req.body);
+        // console.log(req.body);
         if (req.body.password == req.body.cpass) {
             let checkmail = await admin.findOne({ email: req.body.email })
             if (checkmail) {

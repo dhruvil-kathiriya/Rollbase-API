@@ -25,7 +25,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use("/admin", require("./routes/Admin/admin"));
-// app.use("/manager", require("./routes/Manager/manager"));
+app.use("/manager", require("./routes/Manager/manager"));
 // app.use("/user", require("./routes/User/user"));
 
 app.listen(port, (err) => {

@@ -17,6 +17,8 @@
     "mongoose": "^8.0.3",
     "multer": "^1.4.5-lts.1",
     "node": "^21.2.0",
+    "node-mailer": "^0.1.1",
+    "nodemailer": "^6.9.7",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "passport-session": "^1.0.2",
