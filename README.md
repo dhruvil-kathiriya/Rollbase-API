@@ -1,6 +1,6 @@
 ﻿# Rollbase-API
 
-There are 3 Rolls In this ApPI 
+There are 3 Rolls In this API 
 
 - Admin/Aaministrator
 - Manager
