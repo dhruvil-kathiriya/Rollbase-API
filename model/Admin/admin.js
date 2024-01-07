@@ -1,17 +1,55 @@
 const mongoose = require("mongoose");
 
-const adminschema = mongoose.Schema({
+// const multer = require("multer");
+
+// const path = require("path");
+
+// const adminImagePath = "/uploads/adminImages";
+
+const adminSchema = mongoose.Schema({
     name: {
-        type: String
+        type: String,
     },
     email: {
-        type: String
+        type: String,
     },
     password: {
-        type: String
-    }
-})
+        type: String,
+    },
+    gender: {
+        type: String,
+    },
+    hobby: {
+        type: Array,
+    },
+    message: {
+        type: String,
+    },
+    managersIds: {
+        type: Array,
+        ref: "Manager",
+    },
+    // adminImage: {
+    //     type: String,
+    //
+    // },
+});
 
-const admin = mongoose.model('admin', adminschema);
+// const imageStorage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, path.join(__dirname, "../..", adminImagePath));
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, file.fieldname + "-" + Date.now());
+//     },
+// });
 
-module.exports = admin;
+// registrationSchema.statics.adminUplodedImage = multer({
+//     storage: imageStorage,
+// }).single("adminImage");
+
+// registrationSchema.statics.imageModelPath = adminImagePath;
+
+const Admin = mongoose.model("Admin", adminSchema);
+
+module.exports = Admin;
